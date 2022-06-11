@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		navigation bar animation
+	</title>
+</head>
+<style type="text/css">
+	body
+		{
+			margin: 0;
+			padding: 0;
+
+		}	
+		nav
+		{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 80px;
+			background: #607d8b;
+			padding: 0 100px;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transition: 0.5s;
+		}
+
+		ul
+		{
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		ul li
+		{
+			list-style: none;
+		}
+		nav ul li a
+		{
+			display: flex;
+			margin: 10px;
+			font-size: 1.1em;
+			text-decoration: none;
+			font-weight: bold;
+			color: white;
+
+		}
+
+		.brand
+		{
+			font-size: 1.8em;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.para
+		{
+			padding: 10em 1em;
+			font-size: 2em;
+		}
+
+		.navbar
+		{
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding: 2rem 0;
+			z-index: 111;
+			transition: all 0.5s;
+		}
+
+		.navbar .sticky
+		{
+			background-color: white;
+			border-bottom: 1px groove grey;
+			padding: 1rem 0;
+		}
+
+</style>
+<body>
+	<nav id="navbar">
+		<a href="#" class="brand">Brand name</a>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Service</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+		<div class="para">
+			<h1>hiden navbar</h1>
+			<p class="para1">OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. WikipediOpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. Wikipedi</p>
+			<p class="para1">OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. WikipediOpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. Wikipedi</p>
+
+			<h1>hiden navbar</h1>
+			<p class="para1">OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. WikipediOpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. Wikipedi</p>
+			<p class="para1">OpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. WikipediOpenWeatherMap is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location. The company provides a minute-by-minute hyperlocal precipitation forecast for any location. Wikipedi</p>
+		</div>
+
+</body>
+<script type="text/javascript">
+	var lastScrollTop=0;
+	navbar=document.getElementById("navbar");
+	window.addEventListener("scroll",function(){
+		var scrollTop=window.pageYOffset || document.documentElement.scrollTop;
+		if(scrollTop > lastScrollTop)
+		{
+			navbar.style.top="-80px";
+
+		}
+		else
+		{
+			navbar.style.top="0px";
+		}
+
+		lastScrollTop=scrollTop;
+	});
+
+	//sticky header
+	window.addEventListener("scroll",() =>{
+		const navbar = document.querySelector("navbar");
+		navbar.classList.toggle("sticky" , window.scrollY > 0);
+
+	})
+
+
+</script>
+</html>

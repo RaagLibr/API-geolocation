@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		card
+	</title>
+	<style type="text/css">
+
+.card
+{
+	margin-top:10em;
+}
+
+.element1
+{
+	float: left;
+	width: 350px;
+	height: 350px;
+	position: relative;
+	margin:40px;
+}
+.front
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: all 0.5s ease;
+	border-radius: 120px 20px;
+
+}
+
+.front img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 120px 20px;
+}
+
+.back
+{
+	background-image: linear-gradient(50deg,#EF96C5,#CCFBFF);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	text-align: center;
+	border:5px ridge #CCFBFF;
+	z-index: -2;
+	box-sizing:border-box;
+	border-radius: 120px 20px;
+}
+
+.pname
+{
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.description
+{
+	margin:20px 0;
+}
+
+.back-content
+{
+	padding: 0 60px;
+}
+
+.icons .fa
+{
+	font-weight: bold;
+	font-size: 22px;
+	margin:0 5px;
+}
+
+
+
+
+
+		/**elem1 **/
+
+
+.element1 .back-content
+{
+	opacity: 0;
+	transform:translateY(-100px);
+	transition:all 1s ease;
+}
+
+.element1:hover .back-content
+{
+	opacity: 1;
+	transform:translateY(0px);
+}
+
+.element1:hover .front
+{
+	opacity: 0;
+	top: -100%;
+}
+
+
+.element1 .back:before
+{
+	position: absolute;
+	content: '';
+	top: 200px;
+	bottom: 200px;
+	right: 50px;
+	left: 50px;
+	border-right: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transition:all 1s ease;
+
+}
+
+.element1 .back:after
+{
+	position: absolute;
+	content: '';
+	top: 50px;
+	bottom: 50px;
+	right: 200px;
+	left: 200px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	transition:all 1s ease;
+
+}
+
+.element1:hover .back:before
+{
+	top: 30px;
+	bottom: 30px;
+}
+
+.element1:hover .back:after
+{
+	right: 30px;
+	left: 30px;
+}
+
+
+
+	</style>
+</head>
+<body>
+
+	<section class="card">
+		<div class="element1">
+		<div class="front" >
+			<img src="img/g1.jpg" alt="project1 image"  >
+		</div>
+		<div class="back"  >
+			<div class="back-content" >
+				<div class="pname">Stylish Girl 2</div>
+				<div class="description">There are many variations of passages of Lorem Ipsum available</div>
+				<div class="icons">
+					
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-dribbble"></i>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="element1">
+		<div class="front"  >
+			<img src="img/g1.jpg" alt="project1 image"  >
+		</div>
+		<div class="back" >
+			<div class="back-content" >
+				<div class="pname">Stylish Girl 2</div>
+				<div class="description">There are many variations of passages of Lorem Ipsum available</div>
+				<div class="icons">
+					
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-dribbble"></i>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div class="element1">
+		<div class="front" >
+			<img src="img/g1.jpg" alt="project1 image"  >
+		</div>
+		<div class="back" >
+			<div class="back-content" >
+				<div class="pname">Stylish Girl 2</div>
+				<div class="description">There are many variations of passages of Lorem Ipsum available</div>
+				<div class="icons">
+					
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-dribbble"></i>
+
+				</div>
+			</div>
+		</div>
+	</div>	
+
+
+	</section>
+</body>
+</html>
