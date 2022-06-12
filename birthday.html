@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		happy 
+	</title>
+</head>
+<link rel="stylesheet" type="text/css" href="">
+<style type="text/css">
+	
+
+	*
+	{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+
+	}
+	body
+	{
+		background-color: #fdbf00;
+	}
+	.card
+	{
+		width: 640px;
+		height: 400px;
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		-webkit-perspective: 1200px;
+		perspective: 1200px;
+		transition: 2s;
+
+	}
+
+	.card:hover
+	{
+		transform: rotate(-5deg);
+	}
+
+	.card:hover .outside
+	{
+		transform: rotateY(-130deg);
+	}
+
+	.outside,.inside
+	{
+		height: 100%;
+		width: 50%;
+		position: absolute;
+		left: 50.1%;
+	}
+
+	.inside
+	{
+		left:50.1% ;
+		background: linear-gradient(to right, grey, white 30%);
+		line-height: 3;
+		font-size: 20px;
+		padding: 0 20px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		left: 50%;
+		box-shadow: 2px 3px 30px grey;
+
+	}
+
+	.outside
+	{
+		-webkit-transform-style: preserve-3d;
+		z-index: 1;
+		transform-origin: left;
+		transform-origin: left;
+		transition: 2s;
+		box-shadow: 2px 3px 30px grey;
+
+	}
+
+	.front,.back
+	{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		transform: rotateX(0deg);
+	}
+
+	.front	
+	{
+		background-color: #ffffff;
+
+	}
+
+	.back
+	{
+		transform: rotateY(180deg);
+		background: linear-gradient(to left,#e0e0e0,#ffffff 30%);
+
+	}
+
+	.cake
+	{
+		width: 100%;
+		position: absolute;
+		bottom: 30px;
+	}
+
+	.top-layer,.middle-layer,.bottom-layer
+	{
+		height: 80px;
+		width: 240px;
+		background-position: 28px 0;
+		background-repeat: repeat;
+		background-size: 60px 100px;
+		background-image: linear-gradient(transparent 50px, #fedbab ,#fedbab 60px, transparent 60px), radial-gradient(circle at 30px 5px , darkred 30px , #fcbf29 31px);
+		margin: auto;
+		border-radius: 25px 25px 10px 10px;
+
+	}
+
+	.middle-layer
+	{
+		transform: scale(0.85);
+		top: 7px;
+	}
+
+	.top-layer
+	{
+		transform: scale(0.7);
+		top: 28px;
+		height: 90px;
+
+	}
+
+	.candle 
+	{
+		height: 45px;
+		width: 8px;
+		background-image: linear-gradient(45deg,red, pink,white ,red, pink ,white,red, pink,white ,red);
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 230px;
+
+	}
+
+	.candle:before
+	{
+		content: "";
+		position: absolute;
+		height: 16px;
+		width: 16px;
+		background-color: #ffa500;
+		border-radius: 0 50% 50% 50%;
+		bottom: 48px;
+		left: -1;
+
+		transform: rotate(45deg);
+	}
+
+	.outside p
+	{
+		font-size: 23px;
+		text-transform: uppercase;
+
+	}
+	.inside
+	{
+
+	}
+
+</style>
+<body>
+
+
+	<div class="card">
+		<div class="inside">
+			
+		</div>
+
+		<div class="outside">
+			<div class="front">
+				<p style="text-align: center; margin-top: 20px;">Happy Birthday Sir.</p>
+				<div class="cake">
+					<div class="top-layer"></div>
+				<div class="middle-layer"></div>
+				<div class="bottom-layer"></div>
+				<div class="candle"></div>
+
+				</div>
+			</div>
+				<div class="back"></div>
+
+		</div>
+		<div class="inside">
+			<p style="line-height: 30px;">Wishing you a very happy birthday sir filled with laughter, I hope you have a great day today & the year ahead is full of many blessings...<br> - Ragini yadav</p>
+
+			<h1 style="color: darkred; font-size: 110px;line-height: 10px">&#127873;</h1>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	
+
+</script>
+</html>
